@@ -172,7 +172,7 @@ export const portfolioCopy: Record<Lang, LocaleBlock> = {
           ],
         },
         {
-          company: 'New Mind',
+          company: 'NewMind',
           title: 'Full Stack Developer',
           bullets: [
             {
@@ -319,7 +319,7 @@ export const portfolioCopy: Record<Lang, LocaleBlock> = {
           ],
         },
         {
-          company: 'New Mind',
+          company: 'NewMind',
           title: 'Full Stack Developer',
           bullets: [
             {
