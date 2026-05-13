@@ -30,7 +30,7 @@ export function Navbar() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-black/10 bg-[#f5f5f7]/70 backdrop-blur-xl backdrop-saturate-[180%] dark:border-white/20 dark:bg-[#161617]/60 dark:backdrop-blur-xl dark:backdrop-saturate-[180%]">
-      <div className="mx-auto flex h-14 max-w-5xl items-center justify-between gap-3 px-4 sm:h-16 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-14 w-full max-w-5xl items-center justify-between gap-3 px-4 sm:h-16 sm:px-6 lg:px-8">
         <Link
           href="#top"
           onClick={(e) => handleHashNavClick(e, '#top')}
@@ -39,8 +39,9 @@ export function Navbar() {
         >
           Emre Çilo
         </Link>
+
         <nav
-          className="flex flex-1 flex-wrap items-center justify-end gap-1 sm:gap-2"
+          className="hidden min-w-0 flex-1 md:flex md:items-center md:justify-end md:gap-x-6"
           aria-label="Primary navigation"
         >
           {links.map(({ href, label }) => (
@@ -53,11 +54,12 @@ export function Navbar() {
               {label}
             </Link>
           ))}
-          <div className="ml-1 flex shrink-0 items-center gap-1.5 sm:ml-2 sm:gap-2">
-            <LanguageToggle />
-            <ThemeToggle />
-          </div>
         </nav>
+
+        <div className="flex shrink-0 items-center gap-2">
+          <LanguageToggle />
+          <ThemeToggle />
+        </div>
       </div>
     </header>
   );
