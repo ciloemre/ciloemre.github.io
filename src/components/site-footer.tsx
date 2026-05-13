@@ -1,25 +1,25 @@
-"use client";
+'use client';
 
-import { Code2, Link2, Mail } from "lucide-react";
-import { motion } from "framer-motion";
-import { scrollReveal } from "@/lib/motion-presets";
-import { usePortfolioCopy } from "@/components/use-portfolio-copy";
-import { useDirectionalReveal } from "@/hooks/use-directional-reveal";
+import { Code2, Link2, Mail } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { scrollReveal } from '@/lib/motion-presets';
+import { usePortfolioCopy } from '@/components/use-portfolio-copy';
+import { useDirectionalReveal } from '@/hooks/use-directional-reveal';
 
 const links = [
   {
-    href: "https://github.com/ciloemre",
-    label: "GitHub",
+    href: 'https://github.com/ciloemre',
+    label: 'GitHub',
     icon: Code2,
   },
   {
-    href: "https://www.linkedin.com/in/ciloemre",
-    label: "LinkedIn",
+    href: 'https://www.linkedin.com/in/ciloemre',
+    label: 'LinkedIn',
     icon: Link2,
   },
   {
-    href: "mailto:emrecilo@hotmail.com",
-    label: "emrecilo@hotmail.com",
+    href: 'mailto:emrecilo@hotmail.com',
+    label: 'emrecilo@hotmail.com',
     icon: Mail,
   },
 ];
@@ -51,8 +51,10 @@ export function SiteFooter() {
             <li key={href}>
               <a
                 href={href}
-                target={href.startsWith("http") ? "_blank" : undefined}
-                rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+                target={href.startsWith('http') ? '_blank' : undefined}
+                rel={
+                  href.startsWith('http') ? 'noopener noreferrer' : undefined
+                }
                 className="inline-flex items-center gap-2 text-sm font-medium tracking-tight text-slate-800 transition-colors hover:text-slate-900 dark:text-white/80 dark:hover:text-white/90"
               >
                 <Icon
